@@ -1,3 +1,7 @@
+# Large / derived data — regenerate via notebook, don't commit
+data/*.pkl
+data/D1.csv
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]

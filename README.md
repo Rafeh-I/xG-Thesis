@@ -53,14 +53,19 @@ This project uses:
 
 Full detail in [`thesis.pdf`](./thesis.pdf).
 
-Note: `xg_analysis.ipynb` runs from the provided checkpoint file. To rebuild the dataset independently from raw StatsBomb data instead, use `feature_extraction.ipynb`, which loads and processes data via the StatsBomb Open Data Python library (`statsbombpy`).
-
 ## Reproducing this
+
+`xg_analysis.ipynb` runs from the provided checkpoint file, which is not distributed in this repo (see Data section). To reproduce it end-to-end:
 
 ```bash
 git clone https://github.com/Rafeh-I/xg-thesis.git
 cd xg-thesis
 pip install -r requirements.txt
+
+# Step 1: regenerate the dataset from raw StatsBomb data (pulls live via statsbombpy)
+jupyter notebook feature_extraction.ipynb
+
+# Step 2: run the full modelling pipeline on the resulting dataset
 jupyter notebook xg_analysis.ipynb
 ```
 

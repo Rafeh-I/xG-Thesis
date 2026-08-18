@@ -37,9 +37,7 @@ This project uses:
 - **[StatsBomb Open Data](https://github.com/statsbomb/open-data)** (event and 360 tracking data), accessed via `statsbombpy`. Per StatsBomb's [Public Data User Agreement](https://github.com/statsbomb/open-data/blob/master/LICENSE.pdf), this data is not redistributed, modified copies are not redistributed, and is not used commercially; the notebook pulls it directly and live from StatsBomb's public repo. The agreement also requires accreditation with the StatsBomb brand logo (see below).
 - **[football-data.co.uk](https://www.football-data.co.uk/)** Bundesliga odds data, used for the applied case study.
 
-<p align="left">
-  <img src="./figures/statsbomb_logo.svg" alt="StatsBomb" height="40">
-</p>
+<p align="left"> <img src="./Login-Hudl-Statsbomb.svg" alt="StatsBomb" height="40"> </p>
 
 *Data provided by StatsBomb.*
 

@@ -30,7 +30,7 @@ xg-thesis/
 ├── xg_analysis.ipynb           # full pipeline: features, models, SHAP, DeLong tests, betting case study
 ├── notebooks/
 │   └── sb_data_extraction.ipynb # supplementary notebook to independently load and process data from the StatsBomb Open Data Python library, producing the checkpoint used by xg_analysis.ipynb
-├── thesis.pdf                  # full written thesis
+├── xG_Thesis.pdf                  # full written thesis
 └── requirements.txt
 ```
 
@@ -54,7 +54,7 @@ This project uses:
 4. **Interpretation**: SHAP values across model families to see how feature importance shifts by architecture
 5. **Applied validation**: a Poisson aggregation model mapping shot-level xG to match outcome probabilities, benchmarked against Bundesliga bookmaker odds
 
-Full detail in [`thesis.pdf`](./thesis.pdf).
+Full detail in [`xG_Thesis.pdf`](./xG_Thesis.pdf).
 
 <p align="center">
   <img src="./figures/roc%20curves.png" width="600">
@@ -65,8 +65,8 @@ Full detail in [`thesis.pdf`](./thesis.pdf).
 `xg_analysis.ipynb` runs from the provided checkpoint file, which is not distributed in this repo (see Data section). To reproduce it end-to-end:
 
 ```bash
-git clone https://github.com/Rafeh-I/xg-thesis.git
-cd xg-thesis
+git clone https://github.com/Rafeh-I/xG-thesis.git
+cd xG-thesis
 pip install -r requirements.txt
 
 # Step 1: regenerate the dataset from raw StatsBomb data (pulls live via statsbombpy)

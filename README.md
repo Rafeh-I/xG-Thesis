@@ -1,11 +1,18 @@
 # xG Beyond Event Data: Spatiotemporal Tracking & Machine Learning in Football Shot Quality Modelling
 
-**MSc Thesis, Econometrics (Data Analytics), University of Amsterdam**
-Rafeh Islam · Supervisor: Hans van Ophem · Second reader: Simon Trimborn
+**Rafeh Islam**
+University of Amsterdam, MSc Econometrics | Data Analytics
+Thesis supervisor: Hans van Ophem · Second reader: Simon Trimborn
 
 > To what extent does incorporating the positions of all players at the moment of the shot, and up to 10 seconds before it, alongside possession-sequence context, improve xG predictions, and which machine learning approach benefits most?
 
 ## TL;DR
+
+<p align="center">
+  <img src="./figures/figure3_shot_distribution.png" width="32%">
+  <img src="./figures/roc%20curves.png" width="32%">
+  <img src="./figures/shap_beeswarm_RF_TT.png" width="32%">
+</p>
 
 - **7,885 shots** across 5 competitions, using StatsBomb 360 freeze-frame (tracking) data
 - Adding tracking data improves discrimination: AUC improves from 0.826 to 0.841 over an event-data-only baseline
@@ -23,10 +30,8 @@ Most public xG models rely on event data alone (shot location, angle, body part,
 ```
 xg-thesis/
 ├── xg_analysis.ipynb           # full pipeline: features, models, SHAP, DeLong tests, betting case study
-├── feature_extraction.ipynb    # supplementary notebook to independently load and process data from the StatsBomb Open Data Python library, producing the checkpoint used by xg_analysis.ipynb
-├── src/                        # reusable functions (model runners, DeLong test, etc.)
-├── figures/                    # key output plots
-├── data/                       # see Data section, not all raw data is redistributed here
+├── notebooks/
+│   └── sb_data_extraction.ipynb # supplementary notebook to independently load and process data from the StatsBomb Open Data Python library, producing the checkpoint used by xg_analysis.ipynb
 ├── thesis.pdf                  # full written thesis
 └── requirements.txt
 ```
@@ -63,7 +68,7 @@ cd xg-thesis
 pip install -r requirements.txt
 
 # Step 1: regenerate the dataset from raw StatsBomb data (pulls live via statsbombpy)
-jupyter notebook feature_extraction.ipynb
+jupyter notebook notebooks/sb_data_extraction.ipynb
 
 # Step 2: run the full modelling pipeline on the resulting dataset
 jupyter notebook xg_analysis.ipynb

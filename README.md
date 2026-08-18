@@ -1,7 +1,7 @@
 # xG Beyond Event Data: Spatiotemporal Tracking & Machine Learning in Football Shot Quality Modelling
 
-**Rafeh Islam**
-University of Amsterdam, MSc Econometrics | Data Analytics
+**Rafeh Islam**<br>
+University of Amsterdam, MSc Econometrics | Data Analytics<br>
 Thesis supervisor: Hans van Ophem 
 
 > To what extent does incorporating the positions of all players at the moment of the shot, and up to 10 seconds before it, alongside possession-sequence context, improve xG predictions, and which machine learning approach benefits most?
@@ -9,9 +9,12 @@ Thesis supervisor: Hans van Ophem
 ## TL;DR
 
 <p align="center">
-  <img src="./figures/figure3_shot_distribution.png" width="32%">
-  <img src="./figures/roc%20curves.png" width="32%">
-  <img src="./figures/shap_beeswarm_RF_TT.png" width="32%">
+  <img src="./figures/roc%20curves.png" width="600">
+</p>
+
+<p align="center">
+  <img src="./figures/figure3_shot_distribution.png" width="290">
+  <img src="./figures/shap_beeswarm_RF_TT.png" width="290">
 </p>
 
 - **7,885 shots** across 5 competitions, using StatsBomb 360 freeze-frame (tracking) data

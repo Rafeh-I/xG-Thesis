@@ -2,7 +2,7 @@
 
 **Rafeh Islam**
 University of Amsterdam, MSc Econometrics | Data Analytics
-Thesis supervisor: Hans van Ophem · Second reader: Simon Trimborn
+Thesis supervisor: Hans van Ophem 
 
 > To what extent does incorporating the positions of all players at the moment of the shot, and up to 10 seconds before it, alongside possession-sequence context, improve xG predictions, and which machine learning approach benefits most?
 

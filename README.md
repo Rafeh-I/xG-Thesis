@@ -2,19 +2,14 @@
 
 **Rafeh Islam**<br>
 University of Amsterdam, MSc Econometrics | Data Analytics<br>
-Thesis supervisor: Hans van Ophem 
+Thesis supervisor: Hans van Ophem
 
 > To what extent does incorporating the positions of all players at the moment of the shot, and up to 10 seconds before it, alongside possession-sequence context, improve xG predictions, and which machine learning approach benefits most?
 
 ## TL;DR
 
 <p align="center">
-  <img src="./figures/roc%20curves.png" width="600">
-</p>
-
-<p align="center">
-  <img src="./figures/figure3_shot_distribution.png" width="290">
-  <img src="./figures/shap_beeswarm_RF_TT.png" width="290">
+  <img src="./figures/figure3_shot_distribution.png" width="500">
 </p>
 
 - **7,885 shots** across 5 competitions, using StatsBomb 360 freeze-frame (tracking) data
@@ -60,6 +55,10 @@ This project uses:
 5. **Applied validation**: a Poisson aggregation model mapping shot-level xG to match outcome probabilities, benchmarked against Bundesliga bookmaker odds
 
 Full detail in [`thesis.pdf`](./thesis.pdf).
+
+<p align="center">
+  <img src="./figures/roc%20curves.png" width="600">
+</p>
 
 ## Reproducing this
 

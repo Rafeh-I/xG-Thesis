@@ -41,7 +41,7 @@ This project uses:
 - **[football-data.co.uk](https://www.football-data.co.uk/)** Bundesliga odds data, used for the applied case study.
 
 <p align="left">
-  <img src="./Login-Hudl-Statsbomb.svg" alt="StatsBomb" height="40">
+ <img src="./figures/Login-Hudl-Statsbomb.svg" alt="StatsBomb" height="40">
 </p>
 
 *Data provided by StatsBomb.*

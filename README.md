@@ -1,7 +1,7 @@
 # xG Beyond Event Data: Spatiotemporal Tracking & Machine Learning in Football Shot Quality Modelling
 
 **MSc Thesis, Econometrics (Data Analytics), University of Amsterdam**
-Rafeh Islam · Supervisor: Hans van Ophem
+Rafeh Islam · Supervisor: Hans van Ophem · Second reader: Simon Trimborn
 
 > To what extent does incorporating the positions of all players at the moment of the shot, and up to 10 seconds before it, alongside possession-sequence context, improve xG predictions, and which machine learning approach benefits most?
 
@@ -22,8 +22,8 @@ Most public xG models rely on event data alone (shot location, angle, body part,
 
 ```
 xg-thesis/
-├── notebooks/
-│   └── xg_analysis.ipynb       # full pipeline: features, models, SHAP, DeLong tests, betting case study
+├── xg_analysis.ipynb           # full pipeline: features, models, SHAP, DeLong tests, betting case study
+├── feature_extraction.ipynb    # supplementary notebook to independently load and process data from the StatsBomb Open Data Python library, producing the checkpoint used by xg_analysis.ipynb
 ├── src/                        # reusable functions (model runners, DeLong test, etc.)
 ├── figures/                    # key output plots
 ├── data/                       # see Data section, not all raw data is redistributed here
@@ -37,7 +37,9 @@ This project uses:
 - **[StatsBomb Open Data](https://github.com/statsbomb/open-data)** (event and 360 tracking data), accessed via `statsbombpy`. Per StatsBomb's [Public Data User Agreement](https://github.com/statsbomb/open-data/blob/master/LICENSE.pdf), this data is not redistributed, modified copies are not redistributed, and is not used commercially; the notebook pulls it directly and live from StatsBomb's public repo. The agreement also requires accreditation with the StatsBomb brand logo (see below).
 - **[football-data.co.uk](https://www.football-data.co.uk/)** Bundesliga odds data, used for the applied case study.
 
-<p align="left"> <img src="./Login-Hudl-Statsbomb.svg" alt="StatsBomb" height="40"> </p>
+<p align="left">
+  <img src="./Login-Hudl-Statsbomb.svg" alt="StatsBomb" height="40">
+</p>
 
 *Data provided by StatsBomb.*
 
@@ -51,13 +53,15 @@ This project uses:
 
 Full detail in [`thesis.pdf`](./thesis.pdf).
 
+Note: `xg_analysis.ipynb` runs from the provided checkpoint file. To rebuild the dataset independently from raw StatsBomb data instead, use `feature_extraction.ipynb`, which loads and processes data via the StatsBomb Open Data Python library (`statsbombpy`).
+
 ## Reproducing this
 
 ```bash
 git clone https://github.com/Rafeh-I/xg-thesis.git
 cd xg-thesis
 pip install -r requirements.txt
-jupyter notebook notebooks/xg_analysis.ipynb
+jupyter notebook xg_analysis.ipynb
 ```
 
 ## Tech stack
